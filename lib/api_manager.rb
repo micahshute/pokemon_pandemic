@@ -9,6 +9,8 @@ class PokemonPandemic::APIManager
         puts "\nMAKING A NETWORK REQUEST........\n"
 
 
+        #MAKE CHANGES
+
         url = BASE_URL + "pokemon?offset=#{(pagenum -1)*limit}&limit=#{limit}"
         res = HTTParty.get(url)
         PokemonPandemic::Pokemon.mass_create_from_api(res["results"])
