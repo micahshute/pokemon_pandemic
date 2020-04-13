@@ -1,5 +1,6 @@
 require_relative "./pokemon_pandemic/version"
 require 'httparty'
+require "pry"
 require_relative "./cli"
 require_relative "./api_manager"
 require_relative "./pokemon"
