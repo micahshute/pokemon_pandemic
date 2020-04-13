@@ -6,10 +6,7 @@ class PokemonPandemic::APIManager
 
     def self.get_pokemon(pagenum=1, limit=20)
 
-        puts "\nMAKING A NETWORK REQUEST........\n"
-
-
-        #MAKE CHANGES
+        # puts "\nMAKING A NETWORK REQUEST........\n"
 
         url = BASE_URL + "pokemon?offset=#{(pagenum -1)*limit}&limit=#{limit}"
         res = HTTParty.get(url)
@@ -21,7 +18,7 @@ class PokemonPandemic::APIManager
     end
 
     def self.get_more_pokemon_info(pokemon)
-        puts "\nMAKING A NETWORK REQUEST........\n"
+        # puts "\nMAKING A NETWORK REQUEST........\n"
 
         url = pokemon.url
         res = HTTParty.get(url)
